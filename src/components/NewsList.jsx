@@ -20,7 +20,7 @@ const NewsList = () => {
         fetchNewsArticles()
     }, [])
     if (articles.length === 0) {
-        return <h1>loading ...</h1>
+        return <h1 style={{ textAlign: 'center' }}>loading ...</h1>
     } else {
         return (
             <main>

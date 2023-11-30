@@ -52,7 +52,7 @@ const App = () => {
           </Route>
           <Route path='/login' element={<Login />}></Route>
           <Route path='/register' element={<Register />}></Route>
-          <Route path='*' element={<h2>page not found</h2>}></Route>
+          <Route path='*' element={<h2 style={{ textAlign: 'center' }}>page not found</h2>}></Route>
         </Routes>
       </userData.Provider>
     </BrowserRouter>

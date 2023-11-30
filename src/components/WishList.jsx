@@ -24,14 +24,16 @@ const WishList = () => {
     return (
         <main>
             <View grid={grid} setGrid={setGrid} />
-            <div className={grid ? "grid-container" : ""}>
+            {
+                wishListItems.length >0 ? <div className={grid ? "grid-container" : ""}>
                 {
                     wishListItems.map((article, index) => {
                         return <NewsListCard key={index}
                             article={article} grid={grid} />
                     })
                 }
-            </div>
+            </div> : <h3 style={{textAlign:"center"}}>no items to display</h3>
+            }
 
         </main>
     )
