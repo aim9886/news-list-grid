@@ -1,0 +1,94 @@
+.view {
+    display: flex;
+    justify-content: right;
+    padding: 1em 0;
+}
+
+.gridlist {
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    border: 1px solid rgb(26, 26, 44);
+}
+
+.gridlist>span {
+    padding: 0.25em 0.5em;
+}
+
+.gridlist>span>svg {
+    display: block;
+}
+
+.chosenView {
+    background-color: rgb(26, 26, 44);
+    color: rgb(240, 235, 230);
+}
+
+
+.title {
+    text-align: center;
+    padding: 2em 0 2.5em;
+}
+
+.card {
+    border-bottom: 1px solid rgb(124, 114, 114);
+    padding: 1em 0;
+    display: flex;
+    /* margin-right: 2px; */
+}
+
+.card:last-child {
+    border-bottom: none;
+}
+
+.card-img {
+    width: 25%;
+    /* border: 1px solid red; */
+    overflow: hidden;
+}
+
+.card-img>img {
+    width: 100%;
+    /* border: 1px solid red; */
+    transform: scale(1.2);
+}
+
+.card-content {
+    width: 75%;
+    padding: 0 1em;
+    word-wrap: break-word;
+    /* border: 1px solid red; */
+}
+
+.card-content>p {
+    max-width: 360px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: grey;
+    line-height: 1.2em;
+    padding-top: 1em;
+}
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 1px solid red; */
+    justify-content: space-between;
+}
+
+.grid-card {
+    width: 48.5%;
+    /* border: 1px solid red; */
+}
+
+@media (max-width:900px) {
+    .card {
+        flex-direction: column;
+        /* background-color: brown; */
+    }
+
+    .card-img {
+        width: 100%;
+    }
+}
