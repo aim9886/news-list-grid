@@ -11,7 +11,6 @@ import ProtectedRoute from './components/ProtectedRoute'
 import WishList from './components/WishList'
 export const userData = createContext()
 
-
 const App = () => {
   const [uid, setUid] = useState("")
   const [wlItems, setWLItems] = useState([])
