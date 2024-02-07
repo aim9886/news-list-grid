@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react'
-import { BrowserRouter, Route, Router, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom' // Router
 import NewsList from './components/NewsList'
 import Login from './components/Login'
 import NewsListItem from './components/NewsListItem'
@@ -7,7 +7,7 @@ import Register from './components/Register'
 import Navbar from './components/Navbar'
 import { onAuthStateChanged } from 'firebase/auth'
 import { auth } from './utilities/firebase'
-import ProtectedRoute from './components/ProtectedRoute'
+// import ProtectedRoute from './components/ProtectedRoute'
 import WishList from './components/WishList'
 export const userData = createContext()
 
@@ -35,19 +35,22 @@ const App = () => {
         </header>
         <Routes>
           <Route path="/"
-            element={<ProtectedRoute>
+            element={
               <NewsList />
-            </ProtectedRoute>}>
+              
+            }>
           </Route>
           <Route path='/news/:title'
-            element={<ProtectedRoute>
+            element={
               <NewsListItem />
-            </ProtectedRoute>}>
+            
+            }>
           </Route>
           <Route path='/wishlist'
-            element={<ProtectedRoute>
+            element={
               <WishList />
-            </ProtectedRoute>}>
+            
+            }>
           </Route>
           <Route path='/login' element={<Login />}></Route>
           <Route path='/register' element={<Register />}></Route>
@@ -59,3 +62,8 @@ const App = () => {
 }
 
 export default App
+
+
+// login : gmail : hemu5697@gmail.com, password : 56978192
+
+// write ProtectedRoute for NewList, NewsListItem and WishList Route like previous

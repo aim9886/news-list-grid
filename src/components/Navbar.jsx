@@ -22,10 +22,12 @@ const Navbar = ({ setUid }) => {
                 <li><NavLink to='/'>news</NavLink></li>
                 {
                     !uid ? <>
+                        <li><NavLink to='/wishlist'>wishlist</NavLink></li>
                         <li><NavLink to='/login'>login</NavLink></li>
                         <li><NavLink to='/register'>register</NavLink></li>
+                        
                     </> : <>
-                        <li><NavLink to='/wishlist'>wishlist</NavLink></li>
+                        
                         <li onClick={handleLogout}><NavLink >logout</NavLink></li>
                     </>
                 }
@@ -35,3 +37,6 @@ const Navbar = ({ setUid }) => {
 }
 
 export default Navbar
+
+
+// paste that wishlist NavLink above logout NavLink
